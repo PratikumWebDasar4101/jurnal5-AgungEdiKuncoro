@@ -20,12 +20,13 @@
 <?php
  if (isset($_POST['komentar'])) {
  	$komentar = $_POST['komentar'];
- 	$hitung	= strlen($komentar);
+ 	$hitung_data = explode(" ",$komentar);
+ 	$hitung	= count($hitung_data);
 
  	if ($hitung < 5) {
- 		echo "Masukan komentar sesuai dengan karakter minimal! (5)";
+ 		echo "Masukan komentar sesuai dengan jumlah kata minimal! (5)";
  	}else{
- 		echo "Jumlah karakter komentar anda : ".$hitung;
+ 		echo "Jumlah kata komentar anda : ".$hitung;
  	}
  }
 ?>
